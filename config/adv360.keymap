@@ -91,22 +91,22 @@
         sym {
             display-name = "Symbol";
             bindings = <
-&none   &none   &none   &none   &none   &none   &none                                                    &none  &none           &none   &none   &none   &none            &none
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                                    &none  &kp LEFT_BRACE  &trans  &trans  &trans  &kp RIGHT_BRACE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none          &trans  &trans    &trans  &trans          &none  &trans          &trans  &trans  &trans  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans                         &trans    &trans                         &kp TILDE       &trans  &trans  &trans  &trans           &trans
-&trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans                         &trans  &trans  &trans  &trans           &trans
+&none   &none     &none     &none      &none       &none   &none                                                    &none  &none           &none   &none   &none   &none            &none
+&trans  &trans    &trans    &trans     &trans      &trans  &none                                                    &none  &kp LEFT_BRACE  &trans  &trans  &trans  &kp RIGHT_BRACE  &trans
+&trans  &trans    &trans    &trans     &trans      &trans  &none          &trans  &trans    &trans  &trans          &none  &trans          &trans  &trans  &trans  &trans           &trans
+&trans  &trans    &trans    &trans     &trans      &trans                         &trans    &trans                         &trans          &trans  &trans  &trans  &trans           &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                 &trans  &trans  &trans    &trans  &trans  &trans                         &trans  &trans  &trans  &trans           &trans
             >;
         };
 
         num {
             display-name = "Number";
             bindings = <
-&none   &none   &none   &none   &none   &none   &none                                                    &none  &none             &none   &none   &none   &none              &none
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                                    &none  &kp LEFT_BRACKET  &trans  &trans  &trans  &kp RIGHT_BRACKET  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none          &trans  &trans    &trans  &trans          &none  &trans            &trans  &trans  &trans  &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans                         &trans    &trans                         &kp GRAVE         &trans  &trans  &trans  &trans             &trans
-&trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans                           &trans  &trans  &trans  &trans             &trans
+&none   &none     &none     &none      &none       &none   &none                                                    &none  &none             &none   &none   &none   &none              &none
+&trans  &trans    &trans    &trans     &trans      &trans  &none                                                    &none  &kp LEFT_BRACKET  &trans  &trans  &trans  &kp RIGHT_BRACKET  &trans
+&trans  &trans    &trans    &trans     &trans      &trans  &none          &trans  &trans    &trans  &trans          &none  &trans            &trans  &trans  &trans  &trans             &trans
+&trans  &trans    &trans    &trans     &trans      &trans                         &trans    &trans                         &trans            &trans  &trans  &trans  &trans             &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                 &trans  &trans  &trans    &trans  &trans  &trans                           &trans  &trans  &trans  &trans             &trans
             >;
         };
     };
