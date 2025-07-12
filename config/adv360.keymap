@@ -40,7 +40,7 @@
 &kp TAB    &kp Q     &kp W     &kp E      &kp R       &kp T   &none                                                                         &none  &kp Y   &kp U       &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A     &kp S     &kp D      &kp F       &kp G   &none               &kp LGUI   &kp LALT    &kp LGUI   &kp RCTRL               &none  &kp H   &kp J       &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z     &kp X     &kp C      &kp V       &kp B                                  &kp HOME    &kp PG_UP                                 &kp N   &kp M       &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                  &lt 5 BSPC  &lt 6 DEL  &kp END     &kp PG_DN  &kp ENTER  &lt 4 SPACE                 &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &mo 2
+&mo 2      &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                  &lt 5 BSPC  &lt 0 DEL  &kp END     &kp PG_DN  &kp ENTER  &lt 4 SPACE                 &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &mo 2
             >;
         };
 
@@ -80,33 +80,22 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&none   &none   &none     &none         &none      &none   &none                                                    &none  &none   &none   &none   &none   &none   &none
-&trans  &trans  &trans    &kp UP_ARROW  &trans     &trans  &none                                                    &none  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &none          &trans  &trans    &trans  &trans          &none  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans        &trans     &trans                         &trans    &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans        &trans                    &trans  &trans  &trans    &trans  &trans  &trans                 &trans  &trans  &trans  &trans  &trans
+&none   &none   &none     &none         &none      &none          &none                                                    &none  &none   &none       &none      &none     &none     &none
+&trans  &trans  &trans    &kp UP_ARROW  &trans     &kp PG_UP      &none                                                    &none  &trans  &trans      &trans     &trans    &trans    &trans
+&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none          &trans  &trans    &trans  &trans          &none  &trans  &trans      &trans     &trans    &trans    &trans
+&trans  &trans  &trans    &trans        &trans     &trans                                &trans    &trans                         &trans  &trans      &trans     &trans    &trans    &trans
+&trans  &trans  &trans    &trans        &trans                           &trans  &trans  &trans    &trans  &trans  &trans                 &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
             >;
         };
 
         sym {
             display-name = "Symbol";
             bindings = <
-&none   &none     &none     &none      &none       &none   &none                                                    &none  &none           &none   &none   &none   &none            &none
-&trans  &trans    &trans    &trans     &trans      &trans  &none                                                    &none  &kp LEFT_BRACE  &trans  &trans  &trans  &kp RIGHT_BRACE  &trans
-&trans  &trans    &trans    &trans     &trans      &trans  &none          &trans  &trans    &trans  &trans          &none  &trans          &trans  &trans  &trans  &trans           &trans
-&trans  &trans    &trans    &trans     &trans      &trans                         &trans    &trans                         &trans          &trans  &trans  &trans  &trans           &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                 &trans  &trans  &trans    &trans  &trans  &trans                         &trans  &trans  &trans  &trans           &trans
-            >;
-        };
-
-        num {
-            display-name = "Number";
-            bindings = <
-&none   &none     &none     &none      &none       &none   &none                                                    &none  &none             &none   &none   &none   &none              &none
-&trans  &trans    &trans    &trans     &trans      &trans  &none                                                    &none  &kp LEFT_BRACKET  &trans  &trans  &trans  &kp RIGHT_BRACKET  &trans
-&trans  &trans    &trans    &trans     &trans      &trans  &none          &trans  &trans    &trans  &trans          &none  &trans            &trans  &trans  &trans  &trans             &trans
-&trans  &trans    &trans    &trans     &trans      &trans                         &trans    &trans                         &trans            &trans  &trans  &trans  &trans             &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                 &trans  &trans  &trans    &trans  &trans  &trans                           &trans  &trans  &trans  &trans             &trans
+&none   &none     &none     &none      &none       &none   &none                                                    &none  &none             &none     &none      &none     &none              &none
+&trans  &trans    &trans    &trans     &trans      &trans  &none                                                    &none  &kp LEFT_BRACE    &trans    &trans     &trans    &kp RIGHT_BRACE    &trans
+&trans  &trans    &trans    &trans     &trans      &trans  &none          &trans  &trans    &trans  &trans          &none  &kp LEFT_BRACKET  &kp DLLR  &kp PRCNT  &kp AMPS  &kp RIGHT_BRACKET  &trans
+&trans  &trans    &trans    &trans     &trans      &trans                         &trans    &trans                         &kp GRAVE         &kp EXCL  &kp AT     &kp HASH  &trans             &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                 &trans  &trans  &trans    &trans  &trans  &trans                           &trans    &trans     &trans    &trans             &trans
             >;
         };
     };
