@@ -21,12 +21,12 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        caps {
-            bindings = <&kp CAPS>;
-            key-positions = <31 42>;
+    macros {
+        lang: new_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>;
+            label = "NEW_MAC";
         };
     };
 
@@ -36,11 +36,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1    &kp N2    &kp N3     &kp N4      &kp N5  &tog 1                                                                        &mo 3  &kp N6  &kp N7      &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q     &kp W     &kp E      &kp R       &kp T   &none                                                                         &none  &kp Y   &kp U       &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A     &kp S     &kp D      &kp F       &kp G   &none               &kp LGUI   &kp LALT    &kp LGUI   &kp RCTRL               &none  &kp H   &kp J       &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z     &kp X     &kp C      &kp V       &kp B                                  &kp HOME    &kp PG_UP                                 &kp N   &kp M       &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                  &lt 5 BSPC  &lt 0 DEL  &kp END     &kp PG_DN  &kp ENTER  &lt 4 SPACE                 &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                   &mo 3  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                    &none  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &lang             &kp LGUI  &kp LALT    &kp LGUI   &kp RCTRL             &none  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME    &kp PG_UP                               &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                  &kp BSPC  &kp DEL   &kp END     &kp PG_DN  &kp ENTER  &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -77,26 +77,24 @@
             >;
         };
 
-        nav {
-            display-name = "Navigation";
-            bindings = <
-&none   &none   &none     &none         &none      &none          &none                                                    &none  &none   &none       &none      &none     &none     &none
-&trans  &trans  &trans    &kp UP_ARROW  &trans     &kp PG_UP      &none                                                    &none  &trans  &trans      &trans     &trans    &trans    &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none          &trans  &trans    &trans  &trans          &none  &trans  &trans      &trans     &trans    &trans    &trans
-&trans  &trans  &trans    &trans        &trans     &trans                                &trans    &trans                         &trans  &trans      &trans     &trans    &trans    &trans
-&trans  &trans  &trans    &trans        &trans                           &trans  &trans  &trans    &trans  &trans  &trans                 &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-            >;
+        extra1 {
+            display-name = "Red";
+            status = "reserved";
         };
 
-        sym {
-            display-name = "Symbol";
-            bindings = <
-&none   &none     &none     &none      &none       &none   &none                                                    &none  &none             &none     &none      &none     &none              &none
-&trans  &trans    &trans    &trans     &trans      &trans  &none                                                    &none  &kp LEFT_BRACE    &trans    &trans     &trans    &kp RIGHT_BRACE    &trans
-&trans  &trans    &trans    &trans     &trans      &trans  &none          &trans  &trans    &trans  &trans          &none  &kp LEFT_BRACKET  &kp DLLR  &kp PRCNT  &kp AMPS  &kp RIGHT_BRACKET  &trans
-&trans  &trans    &trans    &trans     &trans      &trans                         &trans    &trans                         &kp GRAVE         &kp EXCL  &kp AT     &kp HASH  &trans             &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT                 &trans  &trans  &trans    &trans  &trans  &trans                           &trans    &trans     &trans    &trans             &trans
-            >;
+        extra2 {
+            display-name = "Purple";
+            status = "reserved";
+        };
+
+        extra3 {
+            display-name = "Cyan";
+            status = "reserved";
+        };
+
+        extra4 {
+            display-name = "Yellow";
+            status = "reserved";
         };
     };
 };
